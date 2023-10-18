@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01E16718D28BA040C336FB58 /* Pods_testNAV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF63C8255211AD901AEF4CDD /* Pods_testNAV.framework */; };
 		CF065A672ADD7EB000A04443 /* testNAVApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF065A662ADD7EB000A04443 /* testNAVApp.swift */; };
 		CF065A692ADD7EB000A04443 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF065A682ADD7EB000A04443 /* ContentView.swift */; };
 		CF065A6B2ADD7EB300A04443 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF065A6A2ADD7EB300A04443 /* Assets.xcassets */; };
 		CF065A6E2ADD7EB300A04443 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF065A6D2ADD7EB300A04443 /* Preview Assets.xcassets */; };
+		CF065A792ADD87C200A04443 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF065A782ADD87C200A04443 /* MapView.swift */; };
+		CF065A7D2ADD939D00A04443 /* GeocodingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF065A7C2ADD939D00A04443 /* GeocodingHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,11 @@
 		CF065A682ADD7EB000A04443 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CF065A6A2ADD7EB300A04443 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF065A6D2ADD7EB300A04443 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CF065A782ADD87C200A04443 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		CF065A7C2ADD939D00A04443 /* GeocodingHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodingHelper.swift; sourceTree = "<group>"; };
+		D5BD329B2FDEAECDA9A7A836 /* Pods-testNAV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testNAV.release.xcconfig"; path = "Target Support Files/Pods-testNAV/Pods-testNAV.release.xcconfig"; sourceTree = "<group>"; };
+		DF63C8255211AD901AEF4CDD /* Pods_testNAV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testNAV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDBB92E000E68F280DF0E35F /* Pods-testNAV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testNAV.debug.xcconfig"; path = "Target Support Files/Pods-testNAV/Pods-testNAV.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,17 +34,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01E16718D28BA040C336FB58 /* Pods_testNAV.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		247A493E45F85168EDA0D393 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EDBB92E000E68F280DF0E35F /* Pods-testNAV.debug.xcconfig */,
+				D5BD329B2FDEAECDA9A7A836 /* Pods-testNAV.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		40B460A76377B46A7BFBFDE6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DF63C8255211AD901AEF4CDD /* Pods_testNAV.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CF065A5A2ADD7EB000A04443 = {
 			isa = PBXGroup;
 			children = (
 				CF065A652ADD7EB000A04443 /* testNAV */,
 				CF065A642ADD7EB000A04443 /* Products */,
+				247A493E45F85168EDA0D393 /* Pods */,
+				40B460A76377B46A7BFBFDE6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,8 +79,10 @@
 		CF065A652ADD7EB000A04443 /* testNAV */ = {
 			isa = PBXGroup;
 			children = (
+				CF065A782ADD87C200A04443 /* MapView.swift */,
 				CF065A662ADD7EB000A04443 /* testNAVApp.swift */,
 				CF065A682ADD7EB000A04443 /* ContentView.swift */,
+				CF065A7C2ADD939D00A04443 /* GeocodingHelper.swift */,
 				CF065A6A2ADD7EB300A04443 /* Assets.xcassets */,
 				CF065A6C2ADD7EB300A04443 /* Preview Content */,
 			);
@@ -74,9 +104,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CF065A712ADD7EB300A04443 /* Build configuration list for PBXNativeTarget "testNAV" */;
 			buildPhases = (
+				13C0E7E125395CE198E55D85 /* [CP] Check Pods Manifest.lock */,
 				CF065A5F2ADD7EB000A04443 /* Sources */,
 				CF065A602ADD7EB000A04443 /* Frameworks */,
 				CF065A612ADD7EB000A04443 /* Resources */,
+				18303376D0A0FD58512CC0A6 /* [CP] Embed Pods Frameworks */,
+				1432321B5A6A7F4E4DED626E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,13 +165,74 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		13C0E7E125395CE198E55D85 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-testNAV-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1432321B5A6A7F4E4DED626E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-testNAV/Pods-testNAV-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-testNAV/Pods-testNAV-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-testNAV/Pods-testNAV-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		18303376D0A0FD58512CC0A6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-testNAV/Pods-testNAV-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-testNAV/Pods-testNAV-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-testNAV/Pods-testNAV-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CF065A5F2ADD7EB000A04443 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				CF065A692ADD7EB000A04443 /* ContentView.swift in Sources */,
+				CF065A792ADD87C200A04443 /* MapView.swift in Sources */,
 				CF065A672ADD7EB000A04443 /* testNAVApp.swift in Sources */,
+				CF065A7D2ADD939D00A04443 /* GeocodingHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,7 +276,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -245,7 +339,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -266,6 +360,7 @@
 		};
 		CF065A722ADD7EB300A04443 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDBB92E000E68F280DF0E35F /* Pods-testNAV.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -295,6 +390,7 @@
 		};
 		CF065A732ADD7EB300A04443 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5BD329B2FDEAECDA9A7A836 /* Pods-testNAV.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
